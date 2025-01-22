@@ -2,7 +2,7 @@ import { client } from '@/sanity/lib/client';
 import ProductDetails from '@/app/component/productDetails';
 
 interface ProductPageProps {
-  params: { slug: string }; // Ensure this matches Next.js params
+  params: { slug: string }; // Matches Next.js dynamic route
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -25,8 +25,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   if (!product) {
     return (
-      <div>
-        <h1>Product not found</h1>
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-3xl font-bold text-gray-800">Product not found</h1>
       </div>
     );
   }
