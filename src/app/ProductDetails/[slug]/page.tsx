@@ -2,7 +2,7 @@ import { client } from '@/sanity/lib/client';
 import ProductDetails from '@/app/component/productDetails';
 
 interface ProductPageProps {
-  params: { slug: string }; // Matches Next.js dynamic route
+  params: { slug: string }; 
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -32,4 +32,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return <ProductDetails product={product} />;
+}
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const slugs = await client.fetch(`*[_type == "product"].slug.current`);
+  return slugs.map((slug: string) => ({ slug }));
 }
