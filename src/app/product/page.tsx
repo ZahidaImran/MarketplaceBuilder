@@ -1,6 +1,6 @@
 import { createClient } from '@sanity/client';
 import ProductGrid from '../component/productGrid';
-import IProduct from '../types/types';
+import { IProduct } from '../types/types';
 
 const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',

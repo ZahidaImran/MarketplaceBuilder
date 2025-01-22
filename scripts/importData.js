@@ -48,7 +48,7 @@ async function uploadProduct(product) {
           },
         },
         tags: product.tags,
-        dicountPercentage: product.dicountPercentage, // Typo in field name: dicountPercentage -> discountPercentage
+        dicountPercentage: product.dicountPercentage, 
         description: product.description,
         isNew: product.isNew,
       };

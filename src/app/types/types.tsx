@@ -1,11 +1,12 @@
-export default interface IProduct {
-    id: string,
-    price:number,
-    slug: string,
-    title:string,
-    tags:string[],
-    dicountPercentage: number,
-    isNew:boolean,
-description: string,
-productImage:string,
-}
+export interface IProduct {
+    _id: string;
+    price: number;
+    title: string;
+    tags: string[];
+    discountPercentage: number;
+    isNew: boolean;
+    description: string;
+    slug: string;
+    productImage: string;
+  }
+  
