@@ -8,6 +8,7 @@ interface ProductDetailsProps {
     price: number;
     productImage: string;
     tags: string[];
+    slug: string,
     description: string;
     isNew: boolean;
     dicountPercentage: number;

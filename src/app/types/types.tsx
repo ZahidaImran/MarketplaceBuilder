@@ -3,7 +3,7 @@ export interface IProduct {
     price: number;
     title: string;
     tags: string[];
-    discountPercentage: number;
+    dicountPercentage: number;
     isNew: boolean;
     description: string;
     slug: string;

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import IProduct from '../types/types';
+import { IProduct } from '../types/types';
 
 interface ProductCardProps {
   product: IProduct;
