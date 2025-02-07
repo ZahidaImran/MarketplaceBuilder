@@ -6,7 +6,9 @@ import AddtoCartButton from '@/app/component/button';
 import { client } from '@/sanity/lib/client';
 
 interface ProductPageProps {
-  params: { slug: string };
+  params: {
+    slug: string;
+  };
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -35,6 +37,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const formattedProduct = {
     _id: product._id,
     title: product.title,
+    slug: product.slug,
     price: product.price,
     productImage: product.productImage,
     tags: product.tags,
