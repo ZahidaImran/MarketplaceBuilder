@@ -6,13 +6,11 @@ import AddtoCartButton from '@/app/component/button';
 import { client } from '@/sanity/lib/client';
 
 interface ProductPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>; 
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const { slug } = params;
+  const { slug } = await params; 
 
   const product: IProduct | null = await client.fetch(
     `*[_type == "product" && slug.current == $slug][0] {
