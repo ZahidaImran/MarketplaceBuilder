@@ -13,7 +13,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const handleViewMore = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault(); 
     if (product.slug) {
-      router.push(`/ProductDetails/${product.slug}`); 
+      router.push(`/productDetails/${product.slug}`); 
     } else {
       console.error('Product slug is missing:', product);
     }

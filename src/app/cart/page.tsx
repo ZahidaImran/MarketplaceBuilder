@@ -54,6 +54,11 @@ export default function CartPage() {
     updateLocalStorage('cart', updatedCartItems);
   };
 
+  const handleCheckout = () => {
+    localStorage.setItem('cartForCheckout', JSON.stringify(cartItems));
+    router.push('/checkout');
+  };
+
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +134,9 @@ export default function CartPage() {
                         .reduce((total, item) => total + item.price * item.quantity, 0)
                         .toFixed(2)}
                     </p>
-                    <button className="mt-6 w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">
+                    <button 
+                    onClick={handleCheckout}
+                     className="mt-6 w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">
                       Checkout
                     </button>
                   </div>

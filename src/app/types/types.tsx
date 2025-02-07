@@ -5,6 +5,7 @@ export interface IProduct {
     tags: string[];
     dicountPercentage: number;
     isNew: boolean;
+    quantity: number;
     description: string;
     slug: string;
     productImage: string;
