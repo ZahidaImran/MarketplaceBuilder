@@ -22,7 +22,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       description,
       "productImage": productImage.asset->url,
       discountPercentage,
-      isNew
+      isNew,
+      quantity
     }`,
     { slug }
   );
@@ -38,8 +39,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
     productImage: product.productImage,
     tags: product.tags,
     description: product.description,
-    quantity: product.quantity,
-    discountPercentage: product.dicountPercentage,
+    quantity: product.quantity, 
+    discountPercentage: product.dicountPercentage, 
     isNew: product.isNew,
   };
 
