@@ -42,7 +42,7 @@ export default function CheckoutPage() {
     };
 
     const validateForm = () => {
-        let newErrors: Record<string, string> = {};
+        const newErrors: Record<string, string> = {};
 
         if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
         if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Enter a valid email';
